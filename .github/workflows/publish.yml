@@ -42,3 +42,11 @@ jobs:
     - name: Generate pages
       run: hexo generate
       working-directory: ./workspace
+    - name: Commit and publish
+      run: |
+        git config user.name "Muton's GitHub Actions"
+        git config user.email "mutongsoft@gmail.com"
+        git add -A .
+        git commit -m "Update"
+        git push
+      working-directory: ./workspace/public
