@@ -38,5 +38,7 @@ jobs:
       run: |
         npm install -g hexo-cli
         npm ci
+      working-directory: ./workspace
     - name: Generate pages
       run: hexo generate
+      working-directory: ./workspace
